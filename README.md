@@ -44,7 +44,7 @@ A comprehensive collection of **verified and working** external resources, blog 
 - [Docker Offload: One of the Best Features for AI Workloads](https://dzone.com/articles/docker-offload-best-feature-for-ai-workloads) - By Naga Santhosh Reddy Vootukuri, Docker Captain
 - [The complete guide to Docker Offload. Beta mode was just launched](https://medium.com/@dev_tips/the-complete-guide-to-docker-offload-beta-mode-was-just-launched-edc80e12f458)
 - [Getting Started with Docker Offload](https://dev.to/bobbyiliev/getting-started-with-docker-offload-8ek)
-- [https://upcloud.com/resources/tutorials/docker-offload-cloud-develop-local/](https://upcloud.com/resources/tutorials/docker-offload-cloud-develop-local/)
+- [Docker Offload – Using the power of the cloud to develop locally](https://upcloud.com/resources/tutorials/docker-offload-cloud-develop-local/)
 - [Docker Offload](https://medium.com/@bhakareashutosh/docker-offload-6f4b450ef13a) - By Ashutosh Bhakara
 - [Docker Offload for blazing fast AI development](https://tobiasfenster.io/docker-offload-for-blazing-fast-ai-development) - By Tobias Fenster
 - [Beyond Containers: How Docker Offload Supercharges DevOps with Cloud AI](https://realops.co/p/beyond-containers-how-docker-offload) - By Gourav Shah
