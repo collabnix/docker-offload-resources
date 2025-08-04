@@ -73,59 +73,11 @@ A comprehensive collection of **verified and working** external resources, blog 
 
 
 
-
 ## 🤝 Contributing
 
 Help us grow this collection of **verified** Docker Offload resources!
 
-### How to Contribute
 
-1. **Fork this repository**
-2. **Verify the link works** before submitting
-3. **Add your resource** to the appropriate section using the format: `[Title](URL) - Brief description`
-4. **Submit a Pull Request**
-
-### Contribution Guidelines
-
-- ✅ **Verify all links work** before submitting
-- ✅ **Docker Offload specific content** only
-- ✅ **High-quality resources** that provide value
-- ✅ **Brief, helpful descriptions**
-- ✅ **Proper categorization**
-- ❌ **No broken or placeholder links**
-- ❌ **No duplicate resources**
-- ❌ **No promotional/spam content**
-
-### Types of Resources We Accept
-
-- 📝 **Blog posts and technical articles**
-- 🎥 **Video tutorials and presentations**
-- 📚 **Official documentation**
-- 🛠️ **Tools and integrations**
-- 💬 **Community discussions and forums**
-- 📊 **Performance studies and benchmarks**
-- 🎯 **Real-world use cases**
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🌟 Acknowledgments
-
-- **Docker team** for developing Docker Offload
-- **Community contributors** sharing their experiences
-- **Content creators** providing tutorials and guides
-- **Beta testers** providing feedback and use cases
-
----
-
-⭐ **Star this repository if these Docker Offload resources help you!** ⭐
-
-**Maintained by the Collabnix community** 🐳
-
-> **Note**: Docker Offload is currently in beta. This collection focuses on real, working resources. All links are regularly checked for availability.
-
-**Last Updated**: August 2025
 
 ---
 
