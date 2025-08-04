@@ -1,0 +1,2 @@
+# No external dependencies required for this basic example
+# This file is included to demonstrate best practices for Python projects
