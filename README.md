@@ -15,7 +15,6 @@ A comprehensive collection of **verified and working** external resources, blog 
 - [Official Resources](#-official-resources)
 - [Blog Posts & Articles](#-blog-posts--articles)
 - [Videos & Presentations](#-videos--presentations)
-- [Community & Social Media](#-community--social-media)
 - [Contributing](#-contributing)
 
 ## 📚 Official Resources
@@ -47,6 +46,9 @@ A comprehensive collection of **verified and working** external resources, blog 
 - [Getting Started with Docker Offload](https://dev.to/bobbyiliev/getting-started-with-docker-offload-8ek)
 - [https://upcloud.com/resources/tutorials/docker-offload-cloud-develop-local/](https://upcloud.com/resources/tutorials/docker-offload-cloud-develop-local/)
 - [Docker Offload](https://medium.com/@bhakareashutosh/docker-offload-6f4b450ef13a)
+- [Docker Offload for blazing fast AI development](https://tobiasfenster.io/docker-offload-for-blazing-fast-ai-development)
+- [Beyond Containers: How Docker Offload Supercharges DevOps with Cloud AI](https://realops.co/p/beyond-containers-how-docker-offload)
+- [Introduction to Docker Offload](https://theaiops.substack.com/p/introduction-to-docker-offload)
 
 
 ## 🎥 Videos & Presentations
