@@ -1,0 +1,146 @@
+# syntax=docker/dockerfile:1
+#
+# Multi-stage Dockerfile Template optimized for Docker Offload
+# 
+# This template demonstrates best practices for:
+# - Layer caching optimization
+# - Build time reduction
+# - Image size minimization
+# - Security considerations
+#
+# Usage:
+# 1. Copy this template to your project
+# 2. Customize the stages for your application
+# 3. Start Docker Offload: docker offload start
+# 4. Build: docker build -t myapp .
+#
+
+# ==============================================================================
+# STAGE 1: Base Dependencies
+# This stage installs system dependencies that rarely change
+# ==============================================================================
+FROM node:18-alpine AS base
+
+# Install system dependencies
+RUN apk add --no-cache \
+    dumb-init \
+    ca-certificates \
+    && rm -rf /var/cache/apk/*
+
+# Create non-root user for security
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001 -G nodejs
+
+# Set working directory
+WORKDIR /app
+
+# Change ownership to nodejs user
+RUN chown -R nodejs:nodejs /app
+USER nodejs
+
+# ==============================================================================
+# STAGE 2: Dependencies Installation
+# This stage installs application dependencies
+# Separated for better layer caching
+# ==============================================================================
+FROM base AS dependencies
+
+# Copy package files first for better caching
+# These files change less frequently than source code
+COPY --chown=nodejs:nodejs package*.json ./
+
+# Install dependencies
+# Use npm ci for faster, reliable, reproducible builds
+RUN npm ci --only=production && npm cache clean --force
+
+# ==============================================================================
+# STAGE 3: Development Dependencies (optional)
+# This stage is used for development builds
+# ==============================================================================
+FROM base AS dev-dependencies
+
+COPY --chown=nodejs:nodejs package*.json ./
+RUN npm ci && npm cache clean --force
+
+# ==============================================================================
+# STAGE 4: Build Stage
+# This stage compiles/builds the application
+# ==============================================================================
+FROM dev-dependencies AS builder
+
+# Copy source code
+COPY --chown=nodejs:nodejs . .
+
+# Build the application
+# Add any build commands here (e.g., npm run build, yarn build)
+RUN npm run build
+
+# ==============================================================================
+# STAGE 5: Runtime Stage (Production)
+# This is the final stage that creates the production image
+# ==============================================================================
+FROM base AS runtime
+
+# Copy production dependencies from dependencies stage
+COPY --from=dependencies --chown=nodejs:nodejs /app/node_modules ./node_modules
+
+# Copy built application from builder stage
+COPY --from=builder --chown=nodejs:nodejs /app/dist ./dist
+COPY --from=builder --chown=nodejs:nodejs /app/package*.json ./
+
+# Expose port (customize as needed)
+EXPOSE 3000
+
+# Health check (customize as needed)
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:3000/health || exit 1
+
+# Use dumb-init to handle signals properly
+ENTRYPOINT ["dumb-init", "--"]
+
+# Start the application
+CMD ["node", "dist/index.js"]
+
+# ==============================================================================
+# Docker Offload Optimization Notes:
+#
+# 1. Layer Ordering: Dependencies are copied before source code
+#    to maximize cache hits when only source code changes
+#
+# 2. Multi-stage builds: Reduces final image size by excluding
+#    build tools and development dependencies
+#
+# 3. Build cache: Docker Offload's cloud cache works best with
+#    proper layer separation
+#
+# 4. Security: Non-root user and minimal base image reduce
+#    attack surface
+#
+# 5. Reproducible builds: Using specific versions and npm ci
+#    ensures consistent builds across environments
+#
+# Performance Tips for Docker Offload:
+# - Use .dockerignore to exclude unnecessary files
+# - Keep frequently changing files (source code) in later layers
+# - Use specific base image tags (not 'latest')
+# - Minimize RUN commands by combining them with &&
+# ==============================================================================
+
+# Alternative stages for different use cases:
+
+# Development stage (for local development)
+FROM dev-dependencies AS development
+COPY --chown=nodejs:nodejs . .
+EXPOSE 3000
+CMD ["npm", "run", "dev"]
+
+# Testing stage (for running tests)
+FROM dev-dependencies AS testing
+COPY --chown=nodejs:nodejs . .
+RUN npm run test
+
+# Production stage with debugging tools (for troubleshooting)
+FROM runtime AS debug
+USER root
+RUN apk add --no-cache curl netcat-openbsd
+USER nodejs
