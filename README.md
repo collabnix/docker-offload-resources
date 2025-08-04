@@ -119,7 +119,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ⭐ **Star this repository if these Docker Offload resources help you!** ⭐
 
-**Maintained by the Docker community** 🐳
+**Maintained by the Collabnix community** 🐳
 
 > **Note**: Docker Offload is currently in beta. This collection focuses on real, working resources. All links are regularly checked for availability.
 
