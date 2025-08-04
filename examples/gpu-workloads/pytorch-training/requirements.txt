@@ -1,0 +1,5 @@
+numpy>=1.21.0
+# PyTorch is included in the base image
+# Additional packages for extended functionality
+tqdm>=4.62.0
+matplotlib>=3.5.0
