@@ -51,6 +51,16 @@ A comprehensive collection of **verified and working** external resources, blog 
 - [Introduction to Docker Offload](https://theaiops.substack.com/p/introduction-to-docker-offload)
 
 
+## Sample Projects, Code Snippets and GitHub
+
+- [CrewAI Marketing Team Demo](https://github.com/docker/compose-for-agents/tree/main/crew-ai)
+- [ADK Multi-Agent Fact Checker](https://github.com/docker/compose-for-agents/tree/main/adk)
+- [A2A Multi-Agent Fact Checker](https://github.com/docker/compose-for-agents/tree/main/a2a)
+- [A simple Node.js web application to demonstrate Docker Offload functionality](https://github.com/ajeetraina/docker-offload-demo)
+- [Docker Offload Performance Tests](https://github.com/Tech-Preta/docker-offload)
+- [Agentic Docker Compose Showcase](https://github.com/kubetoolsio/agentic-docker-offload-showcase)
+- 
+
 ## 🎥 Videos & Presentations
 
 ### Official Videos
