@@ -34,87 +34,29 @@ A comprehensive collection of **verified and working** external resources, blog 
 - [Docker Pricing](https://www.docker.com/pricing/) - Subscription plans and pricing
 - [Docker Desktop Download](https://www.docker.com/products/docker-desktop/) - Required for Docker Offload
 
-### Official Blogs & Updates
-- [Docker Official Blog](https://www.docker.com/blog/) - Official announcements and updates
-- [Docker Newsletter](https://www.docker.com/newsletter-subscription) - Stay updated with Docker news
+
 
 ## 📝 Blog Posts & Articles
 
 ### Technical Guides & Tutorials
 - [Introducing Docker Offload](https://dev.to/kristiyanvelkov/introducing-docker-offload-3dgj) - Comprehensive introduction by Kristiyan Velkov
 - [The Complete Guide to Docker Offload Beta Mode](https://medium.com/@dev_tips/the-complete-guide-to-docker-offload-beta-mode-was-just-launched-edc80e12f458) - Detailed Medium guide with hands-on examples
-- [Docker Offload: Getting Started](https://collabnix.com/docker-offload-getting-started/) - Ajeet Raina's getting started guide
-- [Docker Offload Best Practices](https://collabnix.com/docker-offload-best-practices/) - Optimization tips and tricks
+- [What is Docker Offload and what problem does it solve?](https://www.ajeetraina.com/what-is-docker-offload-and-what-problem-does-it-solve/)
+- [Docker Offload: One of the Best Features for AI Workloads](https://dzone.com/articles/docker-offload-best-feature-for-ai-workloads)
+- [The complete guide to Docker Offload. Beta mode was just launched](https://medium.com/@dev_tips/the-complete-guide-to-docker-offload-beta-mode-was-just-launched-edc80e12f458)
+- [Getting Started with Docker Offload](https://dev.to/bobbyiliev/getting-started-with-docker-offload-8ek)
 
-### Community Experiences
-- [My First Week with Docker Offload](https://dev.to/search?q=docker%20offload) - Developer experiences and use cases
-- [Docker Offload for Machine Learning](https://dev.to/search?q=docker%20offload%20ml) - ML-specific use cases
 
 ## 🎥 Videos & Presentations
 
 ### Official Videos
 - [New Docker Feature to Offload Containers](https://www.youtube.com/watch?v=m42O9ke6fzE) - Official introduction video
-- [Docker Desktop Latest Features](https://www.youtube.com/c/DockerIo) - Docker's official YouTube channel
+- [Docker Offload - Offload to the Cloud with GPU Acceleration](https://www.youtube.com/watch?v=IbqCiXw6pSI)
+- [Docker Offload Explained in Hindi | Build & Run Containers with GPU Support | Docker Offload](https://www.youtube.com/watch?v=L3Q6m8dYgkk)
+- [Docker Offload Explained: Build & Run Containers on GPU in the Cloud with Local Simplicity!](https://www.youtube.com/watch?v=4uM_HVb762E)
 
-### Community Content
-- [Docker YouTube Channel](https://www.youtube.com/c/DockerIo) - Official Docker videos and tutorials
-- [Docker Build Tips and Tricks](https://www.youtube.com/results?search_query=docker+build+optimization) - Build optimization techniques
 
-## 👥 Community & Social Media
 
-### Official Social Media
-- [Docker on Twitter/X](https://twitter.com/docker) - Official Docker account
-- [Docker on LinkedIn](https://www.linkedin.com/company/docker-inc) - Company updates and news
-- [Docker Community Slack](https://dockercommunity.slack.com/) - Join the Docker community
-
-### Forums & Discussions
-- [Docker Community Forums](https://forums.docker.com/) - Official community discussions
-- [Docker Subreddit](https://www.reddit.com/r/docker/) - Community discussions and Q&A
-- [Stack Overflow - Docker](https://stackoverflow.com/questions/tagged/docker) - Technical Q&A
-- [Docker Desktop Issues](https://github.com/docker/for-mac/issues) - Mac-specific issues
-- [Docker Desktop for Windows Issues](https://github.com/docker/for-win/issues) - Windows-specific issues
-
-### Community Resources
-- [Docker Captains](https://www.docker.com/community/captains/) - Docker community leaders
-- [Docker Meetups](https://events.docker.com/) - Local Docker meetup groups
-- [DockerCon](https://docker.events.cube365.net/dockercon/) - Annual Docker conference
-
-### Developer Communities
-- [Docker Hub](https://hub.docker.com/) - Container registry and community
-- [GitHub Docker Organization](https://github.com/docker) - Docker open source projects
-
-## 🛠 Tools & Integrations
-
-### GitHub Actions & CI/CD
-- [Docker GitHub Actions](https://github.com/docker/build-push-action) - Official GitHub Action for building Docker images
-- [Docker Buildx Action](https://github.com/docker/setup-buildx-action) - Setup Docker Buildx
-
-### Development Tools
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) - Required for Docker Offload
-- [Docker CLI Documentation](https://docs.docker.com/engine/reference/commandline/cli/) - Command line reference
-- [Docker Compose](https://docs.docker.com/compose/) - Multi-container applications
-
-## 📖 Learning Resources
-
-### Official Learning
-- [Docker Learning Center](https://www.docker.com/learning-center/) - Official learning resources
-- [Docker Curriculum](https://docker-curriculum.com/) - Beginner-friendly tutorial
-- [Play with Docker](https://labs.play-with-docker.com/) - Interactive Docker playground
-
-### Books & Guides
-- [Docker Documentation](https://docs.docker.com/) - Comprehensive official documentation
-- [Docker Best Practices](https://docs.docker.com/develop/dev-best-practices/) - Official best practices
-
-## 🔧 Technical Resources
-
-### Docker Build Optimization
-- [Docker Build Best Practices](https://docs.docker.com/develop/dev-best-practices/) - Official optimization guide
-- [Multi-stage Builds](https://docs.docker.com/develop/dev-best-practices/#use-multi-stage-builds) - Reduce image size
-- [Docker Buildx](https://docs.docker.com/buildx/) - Extended build capabilities
-
-### Security & Performance
-- [Docker Security](https://docs.docker.com/engine/security/) - Security best practices
-- [Docker Performance Tuning](https://docs.docker.com/config/containers/resource_constraints/) - Resource optimization
 
 ## 🤝 Contributing
 
