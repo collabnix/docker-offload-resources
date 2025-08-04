@@ -61,7 +61,7 @@ A comprehensive collection of **verified and working** external resources, blog 
 - [A simple Node.js web application to demonstrate Docker Offload functionality](https://github.com/ajeetraina/docker-offload-demo)
 - [Docker Offload Performance Tests](https://github.com/Tech-Preta/docker-offload)
 - [Agentic Docker Compose Showcase](https://github.com/kubetoolsio/agentic-docker-offload-showcase)
-- 
+  
 
 ## 🎥 Videos & Presentations
 
