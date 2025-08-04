@@ -1,0 +1,312 @@
+# Docker Ignore Template for Docker Offload Optimization
+#
+# This .dockerignore file helps reduce build context size and improve
+# build performance with Docker Offload by excluding unnecessary files.
+#
+# Performance Impact:
+# - Smaller build context = faster uploads to cloud builders
+# - Fewer files to process = faster builds
+# - Better layer caching efficiency
+#
+# Usage:
+# 1. Copy this file to your project root as .dockerignore
+# 2. Customize the patterns for your specific project
+# 3. Test with: docker build --progress=plain -t test .
+
+# ==============================================================================
+# Version Control
+# ==============================================================================
+.git
+.gitignore
+.gitattributes
+.gitmodules
+.github/
+
+# Subversion
+.svn/
+
+# Mercurial
+.hg/
+.hgignore
+.hgrc
+
+# ==============================================================================
+# IDE and Editor Files
+# ==============================================================================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# ==============================================================================
+# Operating System Files
+# ==============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ==============================================================================
+# Language and Framework Specific
+# ==============================================================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.node_repl_history
+.yarn-integrity
+.pnpm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.cache
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+.mvn/
+mvnw
+mvnw.cmd
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+vendor/
+
+# Rust
+target/
+Cargo.lock
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+
+# Ruby
+*.gem
+.bundle/
+vendor/
+
+# ==============================================================================
+# Build and Distribution
+# ==============================================================================
+dist/
+build/
+out/
+coverage/
+*.tar.gz
+*.zip
+*.dmg
+*.pkg
+*.deb
+*.rpm
+
+# ==============================================================================
+# Logs and Temporary Files
+# ==============================================================================
+*.log
+logs/
+tmp/
+temp/
+.tmp/
+*.tmp
+*.temp
+*.pid
+*.seed
+*.lock
+
+# ==============================================================================
+# Configuration and Secrets
+# ==============================================================================
+# Environment files (be careful - you might need these)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Configuration files that shouldn't be in containers
+config.local.*
+*.local.json
+.secrets/
+
+# Certificates and keys
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+*.jks
+
+# ==============================================================================
+# Database Files
+# ==============================================================================
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ==============================================================================
+# Documentation and Assets
+# ==============================================================================
+# Documentation (unless needed in container)
+README*.md
+CHANGELOG*.md
+CONTRIBUTING*.md
+LICENSE*
+docs/
+doc/
+
+# Asset source files (keep compiled assets)
+*.psd
+*.ai
+*.sketch
+*.fig
+*.xd
+
+# ==============================================================================
+# Testing
+# ==============================================================================
+test/
+tests/
+__tests__/
+*.test.*
+*.spec.*
+coverage/
+.nyc_output/
+jest.config.*
+cypress/
+
+# ==============================================================================
+# Docker Related (avoid recursion)
+# ==============================================================================
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Container logs
+docker-compose.override.yml
+
+# ==============================================================================
+# Cloud and Infrastructure
+# ==============================================================================
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Kubernetes
+*.yaml
+*.yml
+k8s/
+kubernetes/
+
+# Cloud provider configs
+.aws/
+.gcp/
+.azure/
+
+# ==============================================================================
+# Monitoring and Analytics
+# ==============================================================================
+.nyc_output/
+coverage/
+*.lcov
+
+# ==============================================================================
+# Package Manager Files (optional)
+# ==============================================================================
+# Uncomment if you don't need these files in the container
+
+# NPM
+# package-lock.json
+
+# Yarn
+# yarn.lock
+
+# Python
+# requirements-dev.txt
+# Pipfile.lock
+
+# Composer (PHP)
+# composer.lock
+
+# ==============================================================================
+# Performance Tips for Docker Offload:
+#
+# 1. Order matters: Put frequently changing patterns at the top
+# 2. Use specific patterns rather than broad wildcards
+# 3. Test your .dockerignore with: docker build --progress=plain
+# 4. Monitor build context size in Docker Desktop
+# 5. Consider using .dockerignore per environment (dev vs prod)
+#
+# Common mistakes to avoid:
+# - Ignoring files you actually need in the container
+# - Using overly broad patterns that exclude necessary files
+# - Not testing after changes
+# ==============================================================================
