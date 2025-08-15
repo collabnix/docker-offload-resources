@@ -30,7 +30,6 @@ A comprehensive collection of **verified and working** external resources, blog 
 
 ### Product Information
 - [Docker Offload Product Page](https://www.docker.com/products/docker-offload/) - Official product information
-- [Docker Pricing](https://www.docker.com/pricing/) - Subscription plans and pricing
 - [Docker Desktop Download](https://www.docker.com/products/docker-desktop/) - Required for Docker Offload
 
 
